@@ -8,15 +8,17 @@ const Form = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.setToDoList([
-      ...props.toDoList,
-      {
-        title: props.input,
-        id: nanoid(),
-        completed: false,
-      },
-    ]);
-    props.setInput("");
+    if (props.input.trim().match(/^\S/)) {
+      props.setToDoList([
+        ...props.toDoList,
+        {
+          title: props.input,
+          id: nanoid(),
+          completed: false,
+        },
+      ]);
+      props.setInput("");
+    }
   };
 
   return (

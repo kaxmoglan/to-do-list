@@ -14,11 +14,13 @@ const ToDo = (props) => {
       })
     );
   };
+
   const handleDelete = () => {
     props.setToDoList(
       props.toDoList.filter((item) => item.id !== props.item.id)
     );
   };
+
   return (
     <div className="todo-block">
       <li>{props.title}</li>
