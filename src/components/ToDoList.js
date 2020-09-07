@@ -11,6 +11,8 @@ const ToDoList = (props) => {
           completed={item.completed}
           key={item.id}
           item={item}
+          toDoList={props.toDoList}
+          setToDoList={props.setToDoList}
         />
       ))}
     </ul>
