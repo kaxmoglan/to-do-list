@@ -46,7 +46,7 @@ function App() {
     setFilter(e.target.value);
   };
 
-  const filterList = () => {
+  useEffect(() => {
     switch (filter) {
       case "completed":
         setFilteredList(toDoList.filter((todo) => todo.completed === true));
@@ -57,9 +57,7 @@ function App() {
       default:
         setFilteredList(toDoList);
     }
-  };
-
-  useEffect(() => filterList(), [filter, toDoList]);
+  }, [filter, toDoList]);
 
   return (
     <div className="App">
