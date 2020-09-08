@@ -31,8 +31,8 @@ const ToDo = (props) => {
   };
 
   const handleEditCancel = () => {
-    setNewName("");
     setIsEditing(false);
+    setNewName(props.item.title);
   };
 
   const handleEditSubmit = (e) => {
