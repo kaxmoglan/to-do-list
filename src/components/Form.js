@@ -29,7 +29,7 @@ const Form = (props) => {
         type="text"
         name="input-text"
         id="input-text"
-        placeholder="New To Do..."
+        placeholder="New To-Do..."
       />
       <button onClick={handleSubmit} type="submit">
         <i className="fas fa-plus"></i>

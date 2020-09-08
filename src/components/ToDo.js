@@ -48,15 +48,26 @@ const ToDo = (props) => {
   // View Templates
   const viewTemplate = (
     <>
-      <p className="toDoList__item-title">{props.title}</p>
+      <p
+        className={
+          props.item.completed
+            ? "toDoList__item-title completed"
+            : "toDoList__item-title"
+        }
+      >
+        {props.title}
+      </p>
       <div className="btn-group">
-        <button className="viewBtn ellipsis" onClick={() => setIsEditing(true)}>
+        <button className="viewBtn edit" onClick={() => setIsEditing(true)}>
           <i className="far fa-edit"></i>
         </button>
-        <button className="viewBtn" onClick={handleDelete}>
+        <button className="viewBtn trash" onClick={handleDelete}>
           <i className="fas fa-trash-alt"></i>
         </button>
-        <button className="viewBtn" onClick={handleCompleted}>
+        <button
+          className={props.item.completed ? "viewBtn completed" : "viewBtn"}
+          onClick={handleCompleted}
+        >
           <i className="far fa-check-square"></i>
         </button>
       </div>
@@ -66,7 +77,6 @@ const ToDo = (props) => {
   const editTemplate = (
     <>
       <form onSubmit={handleEditSubmit}>
-        <label htmlFor="todo-edit">Edit</label>
         <input
           value={newName}
           id="todo-edit"
@@ -74,12 +84,18 @@ const ToDo = (props) => {
           onChange={handleEditInput}
           autoFocus
         />
-        <button type="button" onClick={handleEditCancel}>
-          <i className="far fa-times-circle"></i>
-        </button>
-        <button type="submit">
-          <i className="far fa-check-circle"></i>
-        </button>
+        <div className="btn-group">
+          <button
+            className="editBtn cancel"
+            type="button"
+            onClick={handleEditCancel}
+          >
+            <i className="far fa-times-circle"></i>
+          </button>
+          <button className="editBtn submit" type="submit">
+            <i className="far fa-check-circle"></i>
+          </button>
+        </div>
       </form>
     </>
   );

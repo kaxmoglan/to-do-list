@@ -16,12 +16,19 @@
     background: rgba(0, 0, 0, 0.25);
     margin-bottom: 1rem;
     padding-left: 1rem;
+    transition: all 500ms ease;
 
     &-title {
       margin-right: auto;
       text-align: left;
       max-width: 38rem;
       overflow-x: hidden;
+      transition: all 500ms ease;
+
+      &.completed {
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: line-through;
+      }
     }
 
     .btn-group {
@@ -39,9 +46,21 @@
       color: rgba(0, 0, 0, 0.25);
       transition: all 500ms ease;
 
-      // &.ellipsis {
-      //   transform: translateY(0.5rem);
-      // }
+      &.completed {
+        color: green;
+
+        &:hover {
+          color: green;
+        }
+      }
+
+      &.trash:hover {
+        color: rgb(237, 8, 8);
+      }
+
+      &.edit:hover {
+        color: rgb(225, 150, 10);
+      }
 
       &:hover {
         color: rgba(0, 0, 0, 1);
@@ -50,6 +69,60 @@
 
       i {
         font-size: 2rem;
+      }
+    }
+
+    // EDIT VIEW
+    form {
+      margin-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      input {
+        margin: 1.5rem 0 0 0;
+        width: 40rem;
+        outline: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        height: 2rem;
+        border-bottom: 1px solid black;
+      }
+
+      .btn-group {
+        margin-left: 0.5rem;
+        width: 10rem;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .editBtn {
+        height: 100%;
+        width: 3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.25);
+        transition: all 500ms ease;
+
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+          transform: scale(1.1);
+        }
+
+        i {
+          font-size: 2rem;
+        }
+
+        &.cancel:hover {
+          color: red;
+        }
+
+        &.submit:hover {
+          color: green;
+        }
       }
     }
   }
