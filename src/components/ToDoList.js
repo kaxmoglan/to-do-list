@@ -13,6 +13,7 @@ const ToDoList = (props) => {
           item={item}
           toDoList={props.toDoList}
           setToDoList={props.setToDoList}
+          editToDo={props.editToDo}
         />
       ))}
     </ul>

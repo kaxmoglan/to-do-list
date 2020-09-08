@@ -28,6 +28,17 @@ function App() {
     },
   ]);
 
+  // Edit To Do Function
+  const editToDo = (id, newName) => {
+    const editedToDoList = toDoList.map((todo) => {
+      if (id === todo.id) {
+        return { ...todo, title: newName };
+      }
+      return todo;
+    });
+    setToDoList(editedToDoList);
+  };
+
   return (
     <div className="App">
       <h1>To-Do List</h1>
@@ -38,7 +49,11 @@ function App() {
         setToDoList={setToDoList}
       />
 
-      <ToDoList toDoList={toDoList} setToDoList={setToDoList} />
+      <ToDoList
+        toDoList={toDoList}
+        setToDoList={setToDoList}
+        editToDo={editToDo}
+      />
     </div>
   );
 }
