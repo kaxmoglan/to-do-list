@@ -61,14 +61,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>To-Do List</h1>
+      <h1 id="title">Obligatory React To-Do List</h1>
       <Form
         input={input}
         setInput={setInput}
         toDoList={toDoList}
         setToDoList={setToDoList}
       />
-      <div className="filters">
+      <div className="filter">
         <ul>
           <li>
             <button value="all" className="filter-btn" onClick={handleFilter}>

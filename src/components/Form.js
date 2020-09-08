@@ -22,13 +22,14 @@ const Form = (props) => {
   };
 
   return (
-    <form>
+    <form id="input-form">
       <input
         value={props.input}
         onChange={handleInput}
         type="text"
         name="input-text"
         id="input-text"
+        placeholder="New To Do..."
       />
       <button onClick={handleSubmit} type="submit">
         <i className="fas fa-plus"></i>

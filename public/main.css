@@ -1,0 +1,62 @@
+#input-form {
+  padding: 0;
+  margin: 0 auto;
+}
+#input-form input {
+  font-size: 2.6rem;
+  width: 45rem;
+  height: 4rem;
+  border: none;
+  padding: 0 5rem 0 1rem;
+  background: rgba(0, 0, 0, 0.15);
+}
+#input-form button {
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  margin-left: -4rem;
+}
+#input-form .fa-plus {
+  font-size: 2.7rem;
+  border: none;
+}
+
+.filter {
+  margin: 3rem 0 3rem 0;
+}
+.filter ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.filter-btn {
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 10px;
+  text-align: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  margin: 5rem 0 5rem 0;
+  font-size: 3rem;
+}
