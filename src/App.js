@@ -29,6 +29,11 @@ function App() {
   ]);
   const [filter, setFilter] = useState("all");
   const [filteredList, setFilteredList] = useState([]);
+  const [filterBtnClass, setFilterBtnClass] = useState({
+    all: "__active",
+    active: "",
+    completed: "",
+  });
 
   // Edit To Do Function
   const editToDo = (id, newName) => {
@@ -44,6 +49,21 @@ function App() {
   // Filter
   const handleFilter = (e) => {
     setFilter(e.target.value);
+    changeClass(e.target.value);
+  };
+
+  const changeClass = (filter) => {
+    switch (filter) {
+      case "all":
+        setFilterBtnClass({ all: "__active", active: "", completed: "" });
+        break;
+      case "active":
+        setFilterBtnClass({ all: "", active: "__active", completed: "" });
+        break;
+      case "completed":
+        setFilterBtnClass({ all: "", active: "", completed: "__active" });
+        break;
+    }
   };
 
   useEffect(() => {
@@ -71,14 +91,18 @@ function App() {
       <div className="filter">
         <ul>
           <li>
-            <button value="all" className="filter-btn" onClick={handleFilter}>
+            <button
+              value="all"
+              className={`filter-btn ${filterBtnClass.all}`}
+              onClick={handleFilter}
+            >
               All
             </button>
           </li>
           <li>
             <button
               value="active"
-              className="filter-btn"
+              className={`filter-btn ${filterBtnClass.active}`}
               onClick={handleFilter}
             >
               Active
@@ -87,7 +111,7 @@ function App() {
           <li>
             <button
               value="completed"
-              className="filter-btn"
+              className={`filter-btn ${filterBtnClass.completed}`}
               onClick={handleFilter}
             >
               Completed

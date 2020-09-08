@@ -14,5 +14,16 @@
     cursor: pointer;
     background: none;
     border: none;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &.__active {
+      color: rgba(0, 0, 0, 1);
+      font-weight: bolder;
+    }
   }
 }

@@ -4,9 +4,10 @@
 }
 #input-form input {
   font-size: 2.6rem;
-  width: 45rem;
+  width: 50rem;
   height: 4rem;
   border: none;
+  border-radius: 1rem;
   padding: 0 5rem 0 1rem;
   background: rgba(0, 0, 0, 0.15);
 }
@@ -17,6 +18,8 @@
   height: 4rem;
   width: 4rem;
   margin-left: -4rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 #input-form .fa-plus {
   font-size: 2.7rem;
@@ -41,6 +44,70 @@
   cursor: pointer;
   background: none;
   border: none;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.filter-btn:hover {
+  color: black;
+}
+.filter-btn.__active {
+  color: black;
+  font-weight: bolder;
+}
+
+.toDoList {
+  list-style-type: none;
+  width: 50rem;
+  margin: 0 auto;
+}
+.toDoList__item {
+  width: 100%;
+  min-height: 5rem;
+  font-size: 2rem;
+  line-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+.toDoList__item-title {
+  margin-right: auto;
+  text-align: left;
+  max-width: 38rem;
+  overflow-x: hidden;
+}
+.toDoList__item .btn-group {
+  margin-right: 0.5rem;
+  width: 10rem;
+}
+.toDoList__item .viewBtn {
+  height: 100%;
+  width: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.toDoList__item .viewBtn:hover {
+  color: black;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.toDoList__item .viewBtn i {
+  font-size: 2rem;
 }
 
 html {

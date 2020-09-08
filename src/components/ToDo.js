@@ -48,16 +48,18 @@ const ToDo = (props) => {
   // View Templates
   const viewTemplate = (
     <>
-      <li>{props.title}</li>
-      <button onClick={handleCompleted}>
-        <i className="far fa-check-square"></i>
-      </button>
-      <button onClick={handleDelete}>
-        <i className="fas fa-trash-alt"></i>
-      </button>
-      <button onClick={() => setIsEditing(true)}>
-        <i className="fas fa-ellipsis-h"></i>
-      </button>
+      <p className="toDoList__item-title">{props.title}</p>
+      <div className="btn-group">
+        <button className="viewBtn ellipsis" onClick={() => setIsEditing(true)}>
+          <i className="far fa-edit"></i>
+        </button>
+        <button className="viewBtn" onClick={handleDelete}>
+          <i className="fas fa-trash-alt"></i>
+        </button>
+        <button className="viewBtn" onClick={handleCompleted}>
+          <i className="far fa-check-square"></i>
+        </button>
+      </div>
     </>
   );
 
@@ -83,7 +85,9 @@ const ToDo = (props) => {
   );
 
   return (
-    <div className="todo-block">{isEditing ? editTemplate : viewTemplate}</div>
+    <li className="toDoList__item">
+      {isEditing ? editTemplate : viewTemplate}
+    </li>
   );
 };
 

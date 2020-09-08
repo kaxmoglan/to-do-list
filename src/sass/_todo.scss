@@ -1,0 +1,56 @@
+@use 'colours';
+
+.toDoList {
+  list-style-type: none;
+  width: 50rem;
+  margin: 0 auto;
+
+  &__item {
+    width: 100%;
+    min-height: 5rem;
+    font-size: 2rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.25);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+
+    &-title {
+      margin-right: auto;
+      text-align: left;
+      max-width: 38rem;
+      overflow-x: hidden;
+    }
+
+    .btn-group {
+      margin-right: 0.5rem;
+      width: 10rem;
+    }
+
+    .viewBtn {
+      height: 100%;
+      width: 3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.25);
+      transition: all 500ms ease;
+
+      // &.ellipsis {
+      //   transform: translateY(0.5rem);
+      // }
+
+      &:hover {
+        color: rgba(0, 0, 0, 1);
+        transform: scale(1.1);
+      }
+
+      i {
+        font-size: 2rem;
+      }
+    }
+  }
+}

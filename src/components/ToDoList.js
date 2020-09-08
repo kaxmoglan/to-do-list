@@ -4,7 +4,7 @@ import ToDo from "./ToDo";
 
 const ToDoList = (props) => {
   return (
-    <ul>
+    <ul className="toDoList">
       {props.filteredList.map((item) => (
         <ToDo
           title={item.title}
