@@ -70,6 +70,7 @@ const ToDo = (props) => {
           id="todo-edit"
           type="text"
           onChange={handleEditInput}
+          autoFocus
         />
         <button type="button" onClick={handleEditCancel}>
           <i className="far fa-times-circle"></i>

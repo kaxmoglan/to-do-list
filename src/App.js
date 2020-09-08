@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import { nanoid } from "nanoid";
@@ -27,6 +27,8 @@ function App() {
       id: nanoid(),
     },
   ]);
+  const [filter, setFilter] = useState("all");
+  const [filteredList, setFilteredList] = useState([]);
 
   // Edit To Do Function
   const editToDo = (id, newName) => {
@@ -39,6 +41,26 @@ function App() {
     setToDoList(editedToDoList);
   };
 
+  // Filter
+  const handleFilter = (e) => {
+    setFilter(e.target.value);
+  };
+
+  const filterList = () => {
+    switch (filter) {
+      case "completed":
+        setFilteredList(toDoList.filter((todo) => todo.completed === true));
+        break;
+      case "active":
+        setFilteredList(toDoList.filter((todo) => todo.completed === false));
+        break;
+      default:
+        setFilteredList(toDoList);
+    }
+  };
+
+  useEffect(() => filterList(), [filter, toDoList]);
+
   return (
     <div className="App">
       <h1>To-Do List</h1>
@@ -48,11 +70,38 @@ function App() {
         toDoList={toDoList}
         setToDoList={setToDoList}
       />
-
+      <div className="filters">
+        <ul>
+          <li>
+            <button value="all" className="filter-btn" onClick={handleFilter}>
+              All
+            </button>
+          </li>
+          <li>
+            <button
+              value="active"
+              className="filter-btn"
+              onClick={handleFilter}
+            >
+              Active
+            </button>
+          </li>
+          <li>
+            <button
+              value="completed"
+              className="filter-btn"
+              onClick={handleFilter}
+            >
+              Completed
+            </button>
+          </li>
+        </ul>
+      </div>
       <ToDoList
         toDoList={toDoList}
         setToDoList={setToDoList}
         editToDo={editToDo}
+        filteredList={filteredList}
       />
     </div>
   );
