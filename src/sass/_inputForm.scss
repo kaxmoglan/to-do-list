@@ -18,6 +18,18 @@
     &.theme_darkblue {
       background: colours.$white;
     }
+    &.theme_red {
+      background: colours.$white;
+    }
+    &.theme_grey {
+      background: colours.$white;
+    }
+    &.theme_orange {
+      background: colours.$white;
+    }
+    &.theme_purple {
+      background: colours.$white;
+    }
   }
 
   .fa-plus {
@@ -36,15 +48,36 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition: all 500ms ease;
+    opacity: 0.85;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &.theme_darkblue {
       background: colours.$grey;
-      opacity: 0.9;
       color: colours.$white;
+    }
 
-      &:hover {
-        opacity: 1;
-      }
+    &.theme_red {
+      background: colours.$grey;
+      color: colours.$white;
+    }
+    &.theme_grey {
+      background: colours.$yellow;
+      color: colours.$white;
+    }
+    &.theme_midblue {
+      background: colours.$yellow;
+      color: colours.$white;
+    }
+    &.theme_orange {
+      background: colours.$black;
+      color: colours.$orange;
+    }
+    &.theme_purple {
+      background: colours.$grey;
+      color: colours.$white;
     }
   }
 }

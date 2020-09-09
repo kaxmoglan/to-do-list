@@ -2,6 +2,7 @@
 @use 'inputForm';
 @use 'filterButtons';
 @use 'todo';
+@use 'themeSwitcher';
 
 html {
   min-height: 100vh;
@@ -23,14 +24,47 @@ html {
   &.theme_darkblue {
     color: colours.$white;
   }
+
+  &.theme_red {
+    color: colours.$white;
+  }
+
+  &.theme_grey {
+    color: colours.$white;
+  }
+  &.theme_midblue {
+    color: colours.$white;
+  }
+  &.theme_orange {
+    color: colours.$black;
+  }
+  &.theme_purple {
+    color: colours.$white;
+  }
 }
 
 .App {
   height: 100vh;
   position: absolute;
   width: 100vw;
+  transition: all 500ms ease;
 
   &.theme_darkblue {
     background-color: colours.$darkblue;
+  }
+  &.theme_red {
+    background-color: colours.$red;
+  }
+  &.theme_grey {
+    background-color: colours.$grey;
+  }
+  &.theme_midblue {
+    background-color: colours.$midblue;
+  }
+  &.theme_orange {
+    background-color: colours.$orange;
+  }
+  &.theme_purple {
+    background-color: colours.$purple;
   }
 }

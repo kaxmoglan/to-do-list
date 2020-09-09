@@ -1,0 +1,74 @@
+@use 'colours';
+
+.themeSwitchSection {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+
+  .themeSwitchTitle {
+    font-size: 2rem;
+    transition: all 500ms ease;
+
+    &.theme_darkblue {
+      color: colours.$white;
+    }
+    &.theme_red {
+      color: colours.$white;
+    }
+
+    &.theme_grey {
+      color: colours.$white;
+    }
+    &.theme_midblue {
+      color: colours.$white;
+    }
+    &.theme_orange {
+      color: colours.$black;
+    }
+    &.theme_purple {
+      color: colours.$white;
+    }
+  }
+
+  .themeSwitcher {
+    display: flex;
+    justify-content: center;
+    div {
+      width: 4rem;
+      height: 4rem;
+      margin: 1rem;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0.25rem 0.25rem;
+      transition: all 250ms ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__darkblue {
+      background: colours.$darkblue;
+    }
+
+    &__red {
+      background: colours.$red;
+    }
+    &__grey {
+      background: colours.$grey;
+    }
+    &__midblue {
+      background: colours.$midblue;
+    }
+    &__orange {
+      background: colours.$orange;
+    }
+    &__purple {
+      background: colours.$purple;
+    }
+  }
+}

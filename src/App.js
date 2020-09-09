@@ -36,10 +36,10 @@ function App() {
     active: "",
     completed: "",
   });
-  const [theme, setTheme] = useState("theme_darkblue");
+  const [theme, setTheme] = useState("theme_purple");
 
   return (
-    <div className={`App ${theme}`} data-theme={theme}>
+    <div className={`App ${theme}`}>
       <h1 className={`title ${theme}`}>Obligatory React To-Do List</h1>
       <Form
         input={input}

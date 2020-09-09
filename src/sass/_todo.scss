@@ -4,6 +4,7 @@
   list-style-type: none;
   width: 50rem;
   margin: 0 auto;
+  margin-bottom: 3rem;
 
   &__item {
     width: 100%;
@@ -15,13 +16,29 @@
     padding-left: 1rem;
     transition: all 500ms ease;
 
+    &.completed {
+      opacity: 0.5;
+      text-decoration: line-through;
+    }
+
     &.theme_darkblue {
       background: colours.$lightgrey;
+    }
 
-      &.completed {
-        opacity: 0.5;
-        text-decoration: line-through;
-      }
+    &.theme_red {
+      background: colours.$lightgrey;
+    }
+    &.theme_grey {
+      background: colours.$white;
+    }
+    &.theme_midblue {
+      background: colours.$white;
+    }
+    &.theme_orange {
+      background: colours.$lightgrey;
+    }
+    &.theme_purple {
+      background: colours.$white;
     }
 
     &-title {
@@ -36,6 +53,21 @@
       line-height: 3rem;
 
       &.theme_darkblue {
+        color: colours.$black;
+      }
+      &.theme_red {
+        color: colours.$black;
+      }
+      &.theme_grey {
+        color: colours.$black;
+      }
+      &.theme_midblue {
+        color: colours.$black;
+      }
+      &.theme_orange {
+        color: colours.$black;
+      }
+      &.theme_purple {
         color: colours.$black;
       }
     }
@@ -78,6 +110,21 @@
       transition: all 500ms ease;
 
       &.theme_darkblue {
+        color: colours.$black;
+      }
+      &.theme_red {
+        color: colours.$black;
+      }
+      &.theme_grey {
+        color: colours.$black;
+      }
+      &.theme_midblue {
+        color: colours.$black;
+      }
+      &.theme_orange {
+        color: colours.$black;
+      }
+      &.theme_purple {
         color: colours.$black;
       }
 
@@ -138,6 +185,21 @@
         opacity: 0.5;
 
         &.theme_darkblue {
+          color: colours.$black;
+        }
+        &.theme_red {
+          color: colours.$black;
+        }
+        &.theme_grey {
+          color: colours.$black;
+        }
+        &.theme_midblue {
+          color: colours.$black;
+        }
+        &.theme_orange {
+          color: colours.$black;
+        }
+        &.theme_purple {
           color: colours.$black;
         }
 
