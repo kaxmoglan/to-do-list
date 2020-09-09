@@ -46,7 +46,7 @@ html {
 .App {
   min-height: 100vh;
   position: absolute;
-  width: 100vw;
+  min-width: 100vw;
   transition: all 500ms ease;
 
   &.theme_darkblue {
