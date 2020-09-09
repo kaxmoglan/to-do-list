@@ -40,7 +40,6 @@ const ToDo = (props) => {
     if (newName.trim().match(/^\S/)) {
       e.preventDefault();
       props.editToDo(props.item.id, newName);
-      setNewName("");
       setIsEditing(false);
     }
   };
