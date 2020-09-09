@@ -54,14 +54,14 @@ function App() {
 
   const changeClass = (filter) => {
     switch (filter) {
-      case "all":
-        setFilterBtnClass({ all: "__active", active: "", completed: "" });
-        break;
       case "active":
         setFilterBtnClass({ all: "", active: "__active", completed: "" });
         break;
       case "completed":
         setFilterBtnClass({ all: "", active: "", completed: "__active" });
+        break;
+      default:
+        setFilterBtnClass({ all: "__active", active: "", completed: "" });
         break;
     }
   };

@@ -7,9 +7,7 @@
 
   &__item {
     width: 100%;
-    min-height: 5rem;
     font-size: 2rem;
-    line-height: 5rem;
     display: flex;
     justify-content: flex-end;
     border-radius: 1rem;
@@ -20,15 +18,40 @@
 
     &-title {
       margin-right: auto;
+      margin-top: 1rem;
       text-align: left;
       max-width: 38rem;
       overflow-x: hidden;
+      overflow-y: hidden;
       transition: all 500ms ease;
+      line-height: 3rem;
 
       &.completed {
         color: rgba(0, 0, 0, 0.5);
-        text-decoration: line-through;
       }
+    }
+
+    &-enter {
+      opacity: 0;
+      height: 0;
+      transform: translateY(-1rem);
+    }
+    &-enter-active {
+      opacity: 1;
+      height: 5rem;
+      transform: translateY(0);
+    }
+    &-enter-done {
+      min-height: 5rem;
+    }
+    &-exit {
+      opacity: 1;
+      height: 5rem;
+      transform: translateY(-1rem);
+    }
+    &-exit-active {
+      opacity: 0;
+      height: 0;
     }
 
     .btn-group {
