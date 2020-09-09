@@ -30,6 +30,7 @@ const Form = (props) => {
         name="input-text"
         id="input-text"
         placeholder="New To-Do..."
+        autoFocus
       />
       <button onClick={handleSubmit} type="submit">
         <i className="fas fa-plus"></i>

@@ -19,6 +19,7 @@
     &-title {
       margin-right: auto;
       margin-top: 1rem;
+      padding-bottom: 1rem;
       text-align: left;
       max-width: 38rem;
       overflow-x: hidden;
@@ -34,7 +35,7 @@
     &-enter {
       opacity: 0;
       height: 0;
-      transform: translateY(-1rem);
+      transform: translateY(-2rem);
     }
     &-enter-active {
       opacity: 1;
@@ -47,7 +48,7 @@
     &-exit {
       opacity: 1;
       height: 5rem;
-      transform: translateY(-1rem);
+      transform: translateY(-2rem);
     }
     &-exit-active {
       opacity: 0;
