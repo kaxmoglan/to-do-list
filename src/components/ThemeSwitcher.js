@@ -2,7 +2,7 @@ import React from "react";
 
 const ThemeSwitcher = (props) => {
   return (
-    <div className="themeSwitchSection">
+    <div className={`themeSwitchSection ${props.theme}`}>
       <h2 className={`themeSwitchTitle ${props.theme}`}>Select A Theme:</h2>
       <div className="themeSwitcher">
         <div

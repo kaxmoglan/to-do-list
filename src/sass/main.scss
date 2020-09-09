@@ -44,7 +44,7 @@ html {
 }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   width: 100vw;
   transition: all 500ms ease;
