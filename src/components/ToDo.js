@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 const ToDo = (props) => {
   // State
@@ -39,9 +39,19 @@ const ToDo = (props) => {
     e.preventDefault();
     if (newName.trim().match(/^\S/)) {
       e.preventDefault();
-      props.editToDo(props.item.id, newName);
+      editToDo(props.item.id, newName);
       setIsEditing(false);
     }
+  };
+
+  const editToDo = (id, newName) => {
+    const editedToDoList = props.toDoList.map((todo) => {
+      if (id === todo.id) {
+        return { ...todo, title: newName };
+      }
+      return todo;
+    });
+    props.setToDoList(editedToDoList);
   };
 
   // View Templates

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import { nanoid } from "nanoid";
@@ -7,6 +7,7 @@ import { nanoid } from "nanoid";
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 import Filter from "./components/Filter";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 function App() {
   // State
@@ -35,22 +36,10 @@ function App() {
     active: "",
     completed: "",
   });
-
-  // Edit To Do Function
-  const editToDo = (id, newName) => {
-    const editedToDoList = toDoList.map((todo) => {
-      if (id === todo.id) {
-        return { ...todo, title: newName };
-      }
-      return todo;
-    });
-    setToDoList(editedToDoList);
-  };
-
-  // Filter
+  const [theme, setTheme] = useState("theme_darkblue");
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`} data-theme={theme}>
       <h1 id="title">Obligatory React To-Do List</h1>
       <Form
         input={input}
@@ -71,9 +60,10 @@ function App() {
       <ToDoList
         toDoList={toDoList}
         setToDoList={setToDoList}
-        editToDo={editToDo}
         filteredList={filteredList}
       />
+
+      <ThemeSwitcher />
     </div>
   );
 }
