@@ -11,10 +11,18 @@
     display: flex;
     justify-content: flex-end;
     border-radius: 1rem;
-    background: rgba(0, 0, 0, 0.25);
     margin-bottom: 1rem;
     padding-left: 1rem;
     transition: all 500ms ease;
+
+    &.theme_darkblue {
+      background: colours.$lightgrey;
+
+      &.completed {
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+    }
 
     &-title {
       margin-right: auto;
@@ -27,8 +35,8 @@
       transition: all 500ms ease;
       line-height: 3rem;
 
-      &.completed {
-        color: rgba(0, 0, 0, 0.5);
+      &.theme_darkblue {
+        color: colours.$black;
       }
     }
 
@@ -67,27 +75,25 @@
       border: none;
       cursor: pointer;
       text-align: center;
-      color: rgba(0, 0, 0, 0.25);
       transition: all 500ms ease;
 
-      &.completed {
-        color: green;
+      &.theme_darkblue {
+        color: colours.$black;
+      }
 
-        &:hover {
-          color: green;
-        }
+      &.check:hover {
+        color: colours.$lightgreen;
       }
 
       &.trash:hover {
-        color: rgb(237, 8, 8);
+        color: colours.$lightred;
       }
 
       &.edit:hover {
-        color: rgb(225, 150, 10);
+        color: colours.$midblue;
       }
 
       &:hover {
-        color: rgba(0, 0, 0, 1);
         transform: scale(1.1);
       }
 
@@ -128,11 +134,15 @@
         border: none;
         cursor: pointer;
         text-align: center;
-        color: rgba(0, 0, 0, 0.25);
         transition: all 500ms ease;
+        opacity: 0.5;
+
+        &.theme_darkblue {
+          color: colours.$black;
+        }
 
         &:hover {
-          color: rgba(0, 0, 0, 1);
+          opacity: 1;
           transform: scale(1.1);
         }
 
@@ -141,11 +151,11 @@
         }
 
         &.cancel:hover {
-          color: red;
+          color: colours.$lightred;
         }
 
         &.submit:hover {
-          color: green;
+          color: colours.$lightgreen;
         }
       }
     }

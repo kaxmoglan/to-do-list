@@ -16,14 +16,21 @@ html {
   padding: 0;
 }
 
-#title {
+.title {
   margin: 5rem 0 5rem 0;
   font-size: 3.5rem;
+
+  &.theme_darkblue {
+    color: colours.$white;
+  }
 }
 
 .App {
-  background-color: colours.$bg;
   height: 100vh;
   position: absolute;
   width: 100vw;
+
+  &.theme_darkblue {
+    background-color: colours.$darkblue;
+  }
 }

@@ -40,12 +40,13 @@ function App() {
 
   return (
     <div className={`App ${theme}`} data-theme={theme}>
-      <h1 id="title">Obligatory React To-Do List</h1>
+      <h1 className={`title ${theme}`}>Obligatory React To-Do List</h1>
       <Form
         input={input}
         setInput={setInput}
         toDoList={toDoList}
         setToDoList={setToDoList}
+        theme={theme}
       />
       <Filter
         filter={filter}
@@ -55,15 +56,17 @@ function App() {
         filteredList={filteredList}
         setFilteredList={setFilteredList}
         toDoList={toDoList}
+        theme={theme}
       />
 
       <ToDoList
         toDoList={toDoList}
         setToDoList={setToDoList}
         filteredList={filteredList}
+        theme={theme}
       />
 
-      <ThemeSwitcher />
+      <ThemeSwitcher theme={theme} setTheme={setTheme} />
     </div>
   );
 }

@@ -37,12 +37,12 @@ const Filter = (props) => {
     }
   }, [props.filter, props.toDoList]);
   return (
-    <div className="filter">
+    <div className={`filter ${props.theme}`}>
       <ul>
         <li>
           <button
             value="all"
-            className={`filter-btn ${props.filterBtnClass.all}`}
+            className={`filter-btn ${props.theme} ${props.filterBtnClass.all}`}
             onClick={handleFilter}
           >
             All
@@ -51,7 +51,7 @@ const Filter = (props) => {
         <li>
           <button
             value="active"
-            className={`filter-btn ${props.filterBtnClass.active}`}
+            className={`filter-btn ${props.theme} ${props.filterBtnClass.active}`}
             onClick={handleFilter}
           >
             Active
@@ -60,7 +60,7 @@ const Filter = (props) => {
         <li>
           <button
             value="completed"
-            className={`filter-btn ${props.filterBtnClass.completed}`}
+            className={`filter-btn ${props.theme} ${props.filterBtnClass.completed}`}
             onClick={handleFilter}
           >
             Completed

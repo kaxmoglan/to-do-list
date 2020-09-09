@@ -1,39 +1,45 @@
-#input-form {
+.input-form {
   padding: 0;
   margin: 0 auto;
 }
-#input-form input {
+.input-form .input-text {
   font-size: 2.5rem;
   width: 50rem;
   border: none;
   border-radius: 1rem;
   padding: 1rem 6rem 1rem 1rem;
-  background: rgba(0, 0, 0, 0.15);
 }
-#input-form input:focus {
+.input-form .input-text:focus {
   outline: none;
 }
-#input-form button {
-  background: rgba(0, 0, 0, 0.25);
+.input-form .input-text.theme_darkblue {
+  background: #fffcf6;
+}
+.input-form .fa-plus {
+  font-size: 2.7rem;
+  border: none;
+}
+.input-form .addBtn {
   border: none;
   cursor: pointer;
   height: 5rem;
   width: 5rem;
   margin-left: -5rem;
   margin-top: 1rem;
+  padding-bottom: 1px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
-#input-form button:hover {
-  color: black;
+.input-form .addBtn.theme_darkblue {
+  background: #495867;
+  opacity: 0.9;
+  color: #fffcf6;
 }
-#input-form .fa-plus {
-  font-size: 2.7rem;
-  border: none;
+.input-form .addBtn.theme_darkblue:hover {
+  opacity: 1;
 }
 
 .filter {
@@ -54,17 +60,20 @@
   cursor: pointer;
   background: none;
   border: none;
-  color: rgba(0, 0, 0, 0.25);
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
-.filter-btn:hover {
-  color: black;
+.filter-btn.theme_darkblue {
+  color: #fffcf6;
+  opacity: 0.5;
 }
-.filter-btn.__active {
-  color: black;
+.filter-btn.theme_darkblue:hover {
+  opacity: 1;
+}
+.filter-btn.theme_darkblue.__active {
   font-weight: bolder;
+  opacity: 1;
 }
 
 .toDoList {
@@ -82,12 +91,18 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-radius: 1rem;
-  background: rgba(0, 0, 0, 0.25);
   margin-bottom: 1rem;
   padding-left: 1rem;
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+.toDoList__item.theme_darkblue {
+  background: whitesmoke;
+}
+.toDoList__item.theme_darkblue.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
 .toDoList__item-title {
   margin-right: auto;
@@ -102,8 +117,8 @@
   transition: all 500ms ease;
   line-height: 3rem;
 }
-.toDoList__item-title.completed {
-  color: rgba(0, 0, 0, 0.5);
+.toDoList__item-title.theme_darkblue {
+  color: black;
 }
 .toDoList__item-enter {
   opacity: 0;
@@ -144,25 +159,23 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  color: rgba(0, 0, 0, 0.25);
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
-.toDoList__item .viewBtn.completed {
-  color: green;
+.toDoList__item .viewBtn.theme_darkblue {
+  color: black;
 }
-.toDoList__item .viewBtn.completed:hover {
-  color: green;
+.toDoList__item .viewBtn.check:hover {
+  color: #04d304;
 }
 .toDoList__item .viewBtn.trash:hover {
-  color: #ed0808;
+  color: red;
 }
 .toDoList__item .viewBtn.edit:hover {
-  color: #e1960a;
+  color: #457b9d;
 }
 .toDoList__item .viewBtn:hover {
-  color: black;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -207,13 +220,16 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  color: rgba(0, 0, 0, 0.25);
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+  opacity: 0.5;
+}
+.toDoList__item form .editBtn.theme_darkblue {
+  color: black;
 }
 .toDoList__item form .editBtn:hover {
-  color: black;
+  opacity: 1;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -225,7 +241,7 @@
   color: red;
 }
 .toDoList__item form .editBtn.submit:hover {
-  color: green;
+  color: #04d304;
 }
 
 html {
@@ -242,14 +258,19 @@ html {
   padding: 0;
 }
 
-#title {
+.title {
   margin: 5rem 0 5rem 0;
   font-size: 3.5rem;
 }
+.title.theme_darkblue {
+  color: #fffcf6;
+}
 
 .App {
-  background-color: white;
   height: 100vh;
   position: absolute;
   width: 100vw;
+}
+.App.theme_darkblue {
+  background-color: #003049;
 }

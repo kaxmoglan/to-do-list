@@ -54,27 +54,45 @@ const ToDo = (props) => {
     props.setToDoList(editedToDoList);
   };
 
+  const liClass = () => {
+    const className = `toDoList__item ${props.theme}`;
+    if (props.item.completed) {
+      return `toDoList__item ${props.theme} completed`;
+    }
+    return className;
+  };
+
   // View Templates
   const viewTemplate = (
     <>
       <p
         className={
           props.item.completed
-            ? "toDoList__item-title completed"
-            : "toDoList__item-title"
+            ? `toDoList__item-title ${props.theme} completed`
+            : `toDoList__item-title ${props.theme}`
         }
       >
         {props.title}
       </p>
-      <div className="btn-group">
-        <button className="viewBtn edit" onClick={() => setIsEditing(true)}>
+      <div className={`btn-group ${props.theme}`}>
+        <button
+          className={`viewBtn edit ${props.theme}`}
+          onClick={() => setIsEditing(true)}
+        >
           <i className="far fa-edit"></i>
         </button>
-        <button className="viewBtn trash" onClick={handleDelete}>
+        <button
+          className={`viewBtn trash ${props.theme}`}
+          onClick={handleDelete}
+        >
           <i className="fas fa-trash-alt"></i>
         </button>
         <button
-          className={props.item.completed ? "viewBtn completed" : "viewBtn"}
+          className={
+            props.item.completed
+              ? `viewBtn check ${props.theme} completed`
+              : `viewBtn check ${props.theme}`
+          }
           onClick={handleCompleted}
         >
           <i className="far fa-check-square"></i>
@@ -93,15 +111,15 @@ const ToDo = (props) => {
           onChange={handleEditInput}
           autoFocus
         />
-        <div className="btn-group">
+        <div className={`btn-group ${props.theme}`}>
           <button
-            className="editBtn cancel"
+            className={`editBtn cancel ${props.theme}`}
             type="button"
             onClick={handleEditCancel}
           >
             <i className="far fa-times-circle"></i>
           </button>
-          <button className="editBtn submit" type="submit">
+          <button className={`editBtn submit ${props.theme}`} type="submit">
             <i className="far fa-check-circle"></i>
           </button>
         </div>
@@ -110,9 +128,7 @@ const ToDo = (props) => {
   );
 
   return (
-    <li className="toDoList__item">
-      {isEditing ? editTemplate : viewTemplate}
-    </li>
+    <li className={liClass()}>{isEditing ? editTemplate : viewTemplate}</li>
   );
 };
 

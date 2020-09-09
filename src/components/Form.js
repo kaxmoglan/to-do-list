@@ -22,7 +22,7 @@ const Form = (props) => {
   };
 
   return (
-    <form id="input-form">
+    <form className={`input-form ${props.theme}`}>
       <input
         value={props.input}
         onChange={handleInput}
@@ -30,9 +30,14 @@ const Form = (props) => {
         name="input-text"
         id="input-text"
         placeholder="New To-Do..."
+        className={`input-text ${props.theme}`}
         autoFocus
       />
-      <button onClick={handleSubmit} type="submit">
+      <button
+        className={`addBtn ${props.theme}`}
+        onClick={handleSubmit}
+        type="submit"
+      >
         <i className="fas fa-plus"></i>
       </button>
     </form>

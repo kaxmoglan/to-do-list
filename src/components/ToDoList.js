@@ -5,7 +5,7 @@ import ToDo from "./ToDo";
 
 const ToDoList = (props) => {
   return (
-    <ul className="toDoList">
+    <ul className={`toDoList ${props.theme}`}>
       <TransitionGroup className="toDoList">
         {props.filteredList.map((item) => (
           <CSSTransition
@@ -20,6 +20,7 @@ const ToDoList = (props) => {
               item={item}
               toDoList={props.toDoList}
               setToDoList={props.setToDoList}
+              theme={props.theme}
             />
           </CSSTransition>
         ))}
