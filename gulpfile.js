@@ -4,7 +4,7 @@ const gulp = require("gulp"),
   files = {
     sass: {
       src: "src/sass/**/*.scss",
-      dest: "public",
+      dest: "src",
     },
   };
 

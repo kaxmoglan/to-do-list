@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { nanoid } from "nanoid";
-
 // Components
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
