@@ -72,7 +72,7 @@ const ToDo = (props) => {
             : `toDoList__item-title ${props.theme}`
         }
       >
-        {props.title}
+        {props.item.title}
       </p>
       <div className={`btn-group ${props.theme}`}>
         <button

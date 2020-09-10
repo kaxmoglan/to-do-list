@@ -14,9 +14,6 @@ const ToDoList = (props) => {
             classNames="toDoList__item"
           >
             <ToDo
-              title={item.title}
-              completed={item.completed}
-              key={item.id}
               item={item}
               toDoList={props.toDoList}
               setToDoList={props.setToDoList}

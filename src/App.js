@@ -12,23 +12,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 function App() {
   // State
   const [input, setInput] = useState("");
-  const [toDoList, setToDoList] = useState([
-    {
-      title: "one",
-      completed: false,
-      id: nanoid(),
-    },
-    {
-      title: "two",
-      completed: true,
-      id: nanoid(),
-    },
-    {
-      title: "three",
-      completed: false,
-      id: nanoid(),
-    },
-  ]);
+  const [toDoList, setToDoList] = useState([]);
   const [filter, setFilter] = useState("all");
   const [filteredList, setFilteredList] = useState([]);
   const [filterBtnClass, setFilterBtnClass] = useState({
@@ -53,7 +37,6 @@ function App() {
         setFilter={setFilter}
         filterBtnClass={filterBtnClass}
         setFilterBtnClass={setFilterBtnClass}
-        filteredList={filteredList}
         setFilteredList={setFilteredList}
         toDoList={toDoList}
         theme={theme}
