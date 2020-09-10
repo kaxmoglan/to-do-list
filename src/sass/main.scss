@@ -20,29 +20,10 @@ html {
 .title {
   margin: 5rem 0 5rem 0;
   font-size: 3.5rem;
+  color: colours.$white;
 
-  &.theme_darkmode {
-    color: colours.$white;
-  }
-  &.theme_darkblue {
-    color: colours.$white;
-  }
-
-  &.theme_red {
-    color: colours.$white;
-  }
-
-  &.theme_grey {
-    color: colours.$white;
-  }
-  &.theme_midblue {
-    color: colours.$white;
-  }
   &.theme_orange {
     color: colours.$black;
-  }
-  &.theme_purple {
-    color: colours.$white;
   }
 }
 

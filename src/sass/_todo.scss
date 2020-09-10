@@ -24,21 +24,13 @@
     &.theme_darkmode {
       background: colours.$vsLight;
     }
-    &.theme_darkblue {
-      background: colours.$lightgrey;
-    }
-    &.theme_red {
-      background: colours.$lightgrey;
-    }
-    &.theme_grey {
-      background: colours.$white;
-    }
-    &.theme_midblue {
-      background: colours.$white;
-    }
+    &.theme_darkblue,
+    &.theme_red,
     &.theme_orange {
       background: colours.$lightgrey;
     }
+    &.theme_grey,
+    &.theme_midblue,
     &.theme_purple {
       background: colours.$white;
     }
@@ -53,27 +45,10 @@
       overflow-y: hidden;
       transition: all 500ms ease;
       line-height: 3rem;
+      color: colours.$black;
 
       &.theme_darkmode {
         color: colours.$white;
-      }
-      &.theme_darkblue {
-        color: colours.$black;
-      }
-      &.theme_red {
-        color: colours.$black;
-      }
-      &.theme_grey {
-        color: colours.$black;
-      }
-      &.theme_midblue {
-        color: colours.$black;
-      }
-      &.theme_orange {
-        color: colours.$black;
-      }
-      &.theme_purple {
-        color: colours.$black;
       }
     }
 
@@ -113,9 +88,11 @@
       cursor: pointer;
       text-align: center;
       transition: all 500ms ease;
+      color: colours.$black;
 
       &.theme_darkmode {
         color: colours.$white;
+
         &.check:hover {
           color: colours.$white;
         }
@@ -127,24 +104,6 @@
         &.edit:hover {
           color: colours.$white;
         }
-      }
-      &.theme_darkblue {
-        color: colours.$black;
-      }
-      &.theme_red {
-        color: colours.$black;
-      }
-      &.theme_grey {
-        color: colours.$black;
-      }
-      &.theme_midblue {
-        color: colours.$black;
-      }
-      &.theme_orange {
-        color: colours.$black;
-      }
-      &.theme_purple {
-        color: colours.$black;
       }
 
       &.check:hover {
@@ -202,6 +161,7 @@
         text-align: center;
         transition: all 500ms ease;
         opacity: 0.5;
+        color: colours.$black;
 
         &.theme_darkmode {
           color: colours.$white;
@@ -213,24 +173,6 @@
           &.submit:hover {
             color: colours.$white;
           }
-        }
-        &.theme_darkblue {
-          color: colours.$black;
-        }
-        &.theme_red {
-          color: colours.$black;
-        }
-        &.theme_grey {
-          color: colours.$black;
-        }
-        &.theme_midblue {
-          color: colours.$black;
-        }
-        &.theme_orange {
-          color: colours.$black;
-        }
-        &.theme_purple {
-          color: colours.$black;
         }
 
         &:hover {

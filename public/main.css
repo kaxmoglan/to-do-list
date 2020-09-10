@@ -8,27 +8,10 @@
   border: none;
   border-radius: 1rem;
   padding: 1rem 6rem 1rem 1rem;
+  background: #fffcf6;
 }
 .input-form .input-text:focus {
   outline: none;
-}
-.input-form .input-text.theme_darkmode {
-  background: #fffcf6;
-}
-.input-form .input-text.theme_darkblue {
-  background: #fffcf6;
-}
-.input-form .input-text.theme_red {
-  background: #fffcf6;
-}
-.input-form .input-text.theme_grey {
-  background: #fffcf6;
-}
-.input-form .input-text.theme_orange {
-  background: #fffcf6;
-}
-.input-form .input-text.theme_purple {
-  background: #fffcf6;
 }
 .input-form .fa-plus {
   font-size: 2.7rem;
@@ -56,29 +39,17 @@
   background: #6e6e6e;
   color: #fffcf6;
 }
-.input-form .addBtn.theme_darkblue {
+.input-form .addBtn.theme_darkblue, .input-form .addBtn.theme_red, .input-form .addBtn.theme_purple {
   background: #495867;
   color: #fffcf6;
 }
-.input-form .addBtn.theme_red {
-  background: #495867;
-  color: #fffcf6;
-}
-.input-form .addBtn.theme_grey {
-  background: #f0a234;
-  color: #fffcf6;
-}
-.input-form .addBtn.theme_midblue {
+.input-form .addBtn.theme_grey, .input-form .addBtn.theme_midblue {
   background: #f0a234;
   color: #fffcf6;
 }
 .input-form .addBtn.theme_orange {
   background: black;
   color: #fca311;
-}
-.input-form .addBtn.theme_purple {
-  background: #495867;
-  color: #fffcf6;
 }
 
 .filter {
@@ -103,6 +74,7 @@
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   opacity: 0.5;
+  color: #fffcf6;
 }
 .filter-btn:hover {
   opacity: 1;
@@ -111,26 +83,11 @@
   font-weight: bolder;
   opacity: 1;
 }
-.filter-btn.theme_darkmode {
-  color: #fffcf6;
-}
-.filter-btn.theme_darkblue {
-  color: #fffcf6;
-}
-.filter-btn.theme_red {
-  color: #fffcf6;
-}
 .filter-btn.theme_grey {
   color: #f0a234;
 }
-.filter-btn.theme_midblue {
-  color: #fffcf6;
-}
 .filter-btn.theme_orange {
   color: black;
-}
-.filter-btn.theme_purple {
-  color: #fffcf6;
 }
 
 .toDoList {
@@ -162,22 +119,10 @@
 .toDoList__item.theme_darkmode {
   background: #6e6e6e;
 }
-.toDoList__item.theme_darkblue {
+.toDoList__item.theme_darkblue, .toDoList__item.theme_red, .toDoList__item.theme_orange {
   background: whitesmoke;
 }
-.toDoList__item.theme_red {
-  background: whitesmoke;
-}
-.toDoList__item.theme_grey {
-  background: #fffcf6;
-}
-.toDoList__item.theme_midblue {
-  background: #fffcf6;
-}
-.toDoList__item.theme_orange {
-  background: whitesmoke;
-}
-.toDoList__item.theme_purple {
+.toDoList__item.theme_grey, .toDoList__item.theme_midblue, .toDoList__item.theme_purple {
   background: #fffcf6;
 }
 .toDoList__item-title {
@@ -192,27 +137,10 @@
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   line-height: 3rem;
+  color: black;
 }
 .toDoList__item-title.theme_darkmode {
   color: #fffcf6;
-}
-.toDoList__item-title.theme_darkblue {
-  color: black;
-}
-.toDoList__item-title.theme_red {
-  color: black;
-}
-.toDoList__item-title.theme_grey {
-  color: black;
-}
-.toDoList__item-title.theme_midblue {
-  color: black;
-}
-.toDoList__item-title.theme_orange {
-  color: black;
-}
-.toDoList__item-title.theme_purple {
-  color: black;
 }
 .toDoList__item-enter {
   opacity: 0;
@@ -256,6 +184,7 @@
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+  color: black;
 }
 .toDoList__item .viewBtn.theme_darkmode {
   color: #fffcf6;
@@ -268,24 +197,6 @@
 }
 .toDoList__item .viewBtn.theme_darkmode.edit:hover {
   color: #fffcf6;
-}
-.toDoList__item .viewBtn.theme_darkblue {
-  color: black;
-}
-.toDoList__item .viewBtn.theme_red {
-  color: black;
-}
-.toDoList__item .viewBtn.theme_grey {
-  color: black;
-}
-.toDoList__item .viewBtn.theme_midblue {
-  color: black;
-}
-.toDoList__item .viewBtn.theme_orange {
-  color: black;
-}
-.toDoList__item .viewBtn.theme_purple {
-  color: black;
 }
 .toDoList__item .viewBtn.check:hover {
   color: #04d304;
@@ -345,6 +256,7 @@
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   opacity: 0.5;
+  color: black;
 }
 .toDoList__item form .editBtn.theme_darkmode {
   color: #fffcf6;
@@ -354,24 +266,6 @@
 }
 .toDoList__item form .editBtn.theme_darkmode.submit:hover {
   color: #fffcf6;
-}
-.toDoList__item form .editBtn.theme_darkblue {
-  color: black;
-}
-.toDoList__item form .editBtn.theme_red {
-  color: black;
-}
-.toDoList__item form .editBtn.theme_grey {
-  color: black;
-}
-.toDoList__item form .editBtn.theme_midblue {
-  color: black;
-}
-.toDoList__item form .editBtn.theme_orange {
-  color: black;
-}
-.toDoList__item form .editBtn.theme_purple {
-  color: black;
 }
 .toDoList__item form .editBtn:hover {
   opacity: 1;
@@ -428,27 +322,10 @@
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
-}
-.themeSwitchSection .themeSwitchTitle.theme_darkmode {
-  color: #fffcf6;
-}
-.themeSwitchSection .themeSwitchTitle.theme_darkblue {
-  color: #fffcf6;
-}
-.themeSwitchSection .themeSwitchTitle.theme_red {
-  color: #fffcf6;
-}
-.themeSwitchSection .themeSwitchTitle.theme_grey {
-  color: #fffcf6;
-}
-.themeSwitchSection .themeSwitchTitle.theme_midblue {
   color: #fffcf6;
 }
 .themeSwitchSection .themeSwitchTitle.theme_orange {
   color: black;
-}
-.themeSwitchSection .themeSwitchTitle.theme_purple {
-  color: #fffcf6;
 }
 .themeSwitchSection .themeSwitcher {
   display: -webkit-box;
@@ -515,27 +392,10 @@ html {
 .title {
   margin: 5rem 0 5rem 0;
   font-size: 3.5rem;
-}
-.title.theme_darkmode {
-  color: #fffcf6;
-}
-.title.theme_darkblue {
-  color: #fffcf6;
-}
-.title.theme_red {
-  color: #fffcf6;
-}
-.title.theme_grey {
-  color: #fffcf6;
-}
-.title.theme_midblue {
   color: #fffcf6;
 }
 .title.theme_orange {
   color: black;
-}
-.title.theme_purple {
-  color: #fffcf6;
 }
 
 .App {
