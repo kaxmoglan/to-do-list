@@ -13,6 +13,11 @@
 .input-form .input-text:focus {
   outline: none;
 }
+@media screen and (max-width: 575px) {
+  .input-form .input-text {
+    width: 80%;
+  }
+}
 .input-form .fa-plus {
   font-size: 2.7rem;
   border: none;
@@ -96,6 +101,11 @@
   margin: 0 auto;
   margin-bottom: 20rem;
 }
+@media screen and (max-width: 575px) {
+  .toDoList {
+    width: 90%;
+  }
+}
 .toDoList__item {
   width: 100%;
   font-size: 2rem;
@@ -120,7 +130,7 @@
   background: #6e6e6e;
 }
 .toDoList__item.theme_darkblue, .toDoList__item.theme_red, .toDoList__item.theme_orange {
-  background: whitesmoke;
+  background: #e7e7e7;
 }
 .toDoList__item.theme_grey, .toDoList__item.theme_midblue, .toDoList__item.theme_purple {
   background: #fffcf6;
@@ -353,6 +363,13 @@
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
+@media screen and (max-width: 575px) {
+  .themeSwitchSection .themeSwitcher div {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+  }
+}
 .themeSwitchSection .themeSwitcher__darkmode {
   background: #1d1d1d;
 }
@@ -380,6 +397,7 @@ html {
   font-size: 10px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -397,11 +415,17 @@ html {
 .title.theme_orange {
   color: black;
 }
+@media screen and (max-width: 575px) {
+  .title {
+    padding: 0 5rem 0 5rem;
+  }
+}
 
 .App {
   min-height: 100vh;
   position: absolute;
   min-width: 100vw;
+  max-width: 100vw;
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;

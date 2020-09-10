@@ -1,10 +1,15 @@
 @use 'colours';
+@use 'responsive';
 
 .toDoList {
   list-style-type: none;
   width: 50rem;
   margin: 0 auto;
   margin-bottom: 20rem;
+
+  @include responsive.small-screen {
+    width: 90%;
+  }
 
   &__item {
     width: 100%;
