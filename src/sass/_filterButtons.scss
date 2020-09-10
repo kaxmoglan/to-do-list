@@ -26,10 +26,12 @@
       opacity: 1;
     }
 
+    &.theme_darkmode {
+      color: colours.$white;
+    }
     &.theme_darkblue {
       color: colours.$white;
     }
-
     &.theme_red {
       color: colours.$white;
     }

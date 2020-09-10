@@ -6,12 +6,12 @@ const ThemeSwitcher = (props) => {
       <h2 className={`themeSwitchTitle ${props.theme}`}>Select A Theme:</h2>
       <div className="themeSwitcher">
         <div
-          onClick={() => props.setTheme("theme_darkblue")}
-          className="themeSwitcher__darkblue"
+          onClick={() => props.setTheme("theme_darkmode")}
+          className="themeSwitcher__darkmode"
         ></div>
         <div
-          onClick={() => props.setTheme("theme_red")}
-          className="themeSwitcher__red"
+          onClick={() => props.setTheme("theme_darkblue")}
+          className="themeSwitcher__darkblue"
         ></div>
         <div
           onClick={() => props.setTheme("theme_grey")}
@@ -22,12 +22,16 @@ const ThemeSwitcher = (props) => {
           className="themeSwitcher__midblue"
         ></div>
         <div
-          onClick={() => props.setTheme("theme_orange")}
-          className="themeSwitcher__orange"
+          onClick={() => props.setTheme("theme_red")}
+          className="themeSwitcher__red"
         ></div>
         <div
           onClick={() => props.setTheme("theme_purple")}
           className="themeSwitcher__purple"
+        ></div>
+        <div
+          onClick={() => props.setTheme("theme_orange")}
+          className="themeSwitcher__orange"
         ></div>
       </div>
     </div>

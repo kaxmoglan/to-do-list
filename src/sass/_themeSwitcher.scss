@@ -11,6 +11,9 @@
   max-width: 100vw;
   transition: all 500ms ease;
 
+  &.theme_darkmode {
+    background: colours.$vsDark;
+  }
   &.theme_darkblue {
     background: colours.$darkblue;
   }
@@ -35,13 +38,15 @@
     font-size: 2rem;
     transition: all 500ms ease;
 
+    &.theme_darkmode {
+      color: colours.$white;
+    }
     &.theme_darkblue {
       color: colours.$white;
     }
     &.theme_red {
       color: colours.$white;
     }
-
     &.theme_grey {
       color: colours.$white;
     }
@@ -74,10 +79,12 @@
       }
     }
 
+    &__darkmode {
+      background: colours.$vsDark;
+    }
     &__darkblue {
       background: colours.$darkblue;
     }
-
     &__red {
       background: colours.$red;
     }

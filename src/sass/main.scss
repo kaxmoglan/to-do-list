@@ -21,6 +21,9 @@ html {
   margin: 5rem 0 5rem 0;
   font-size: 3.5rem;
 
+  &.theme_darkmode {
+    color: colours.$white;
+  }
   &.theme_darkblue {
     color: colours.$white;
   }
@@ -49,6 +52,9 @@ html {
   min-width: 100vw;
   transition: all 500ms ease;
 
+  &.theme_darkmode {
+    background-color: colours.$vsDark;
+  }
   &.theme_darkblue {
     background-color: colours.$darkblue;
   }

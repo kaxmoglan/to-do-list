@@ -21,10 +21,12 @@
       text-decoration: line-through;
     }
 
+    &.theme_darkmode {
+      background: colours.$vsLight;
+    }
     &.theme_darkblue {
       background: colours.$lightgrey;
     }
-
     &.theme_red {
       background: colours.$lightgrey;
     }
@@ -52,6 +54,9 @@
       transition: all 500ms ease;
       line-height: 3rem;
 
+      &.theme_darkmode {
+        color: colours.$white;
+      }
       &.theme_darkblue {
         color: colours.$black;
       }
@@ -109,6 +114,20 @@
       text-align: center;
       transition: all 500ms ease;
 
+      &.theme_darkmode {
+        color: colours.$white;
+        &.check:hover {
+          color: colours.$white;
+        }
+
+        &.trash:hover {
+          color: colours.$white;
+        }
+
+        &.edit:hover {
+          color: colours.$white;
+        }
+      }
       &.theme_darkblue {
         color: colours.$black;
       }
@@ -184,6 +203,17 @@
         transition: all 500ms ease;
         opacity: 0.5;
 
+        &.theme_darkmode {
+          color: colours.$white;
+
+          &.cancel:hover {
+            color: colours.$white;
+          }
+
+          &.submit:hover {
+            color: colours.$white;
+          }
+        }
         &.theme_darkblue {
           color: colours.$black;
         }
