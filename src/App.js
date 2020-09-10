@@ -20,7 +20,7 @@ function App() {
     active: "",
     completed: "",
   });
-  const [theme, setTheme] = useState("theme_darkmode");
+  const [theme, setTheme] = useState("theme_darkblue");
 
   return (
     <div className={`App ${theme}`}>
