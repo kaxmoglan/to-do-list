@@ -16,6 +16,7 @@
     font-size: 2rem;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     border-radius: 1rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
@@ -40,12 +41,55 @@
       background: colours.$white;
     }
 
+    .hamburger {
+      width: 2rem;
+      height: 0.2rem;
+      background: colours.$black;
+      position: relative;
+      top: 0.2rem;
+      transition: all 500ms ease;
+
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 2rem;
+        height: 0.2rem;
+        background: colours.$black;
+        position: relative;
+        top: -2.2rem;
+        transition: all 500ms ease;
+      }
+      &::after {
+        display: inline-block;
+        content: "";
+        width: 2rem;
+        height: 0.2rem;
+        background: colours.$black;
+        position: relative;
+        top: -3.8rem;
+        transition: all 500ms ease;
+      }
+
+      &.theme_darkmode {
+        background: colours.$white;
+
+        &::before {
+          background: colours.$white;
+        }
+
+        &::after {
+          background: colours.$white;
+        }
+      }
+    }
+
     &-title {
       margin-right: auto;
       margin-top: 1rem;
+      margin-left: 2rem;
       padding-bottom: 1rem;
       text-align: left;
-      max-width: 38rem;
+      max-width: 34rem;
       overflow-x: hidden;
       overflow-y: hidden;
       transition: all 500ms ease;

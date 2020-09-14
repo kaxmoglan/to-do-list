@@ -115,6 +115,9 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 1rem;
   margin-bottom: 1rem;
   padding-left: 1rem;
@@ -135,12 +138,56 @@
 .toDoList__item.theme_grey, .toDoList__item.theme_midblue, .toDoList__item.theme_purple {
   background: #fffcf6;
 }
+.toDoList__item .hamburger {
+  width: 2rem;
+  height: 0.2rem;
+  background: black;
+  position: relative;
+  top: 0.2rem;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.toDoList__item .hamburger::before {
+  display: inline-block;
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: black;
+  position: relative;
+  top: -2.2rem;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.toDoList__item .hamburger::after {
+  display: inline-block;
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: black;
+  position: relative;
+  top: -3.8rem;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.toDoList__item .hamburger.theme_darkmode {
+  background: #fffcf6;
+}
+.toDoList__item .hamburger.theme_darkmode::before {
+  background: #fffcf6;
+}
+.toDoList__item .hamburger.theme_darkmode::after {
+  background: #fffcf6;
+}
 .toDoList__item-title {
   margin-right: auto;
   margin-top: 1rem;
+  margin-left: 2rem;
   padding-bottom: 1rem;
   text-align: left;
-  max-width: 38rem;
+  max-width: 34rem;
   overflow-x: hidden;
   overflow-y: hidden;
   -webkit-transition: all 500ms ease;
