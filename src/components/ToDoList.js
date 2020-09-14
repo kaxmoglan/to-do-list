@@ -21,10 +21,10 @@ const ToDoList = (props) => {
     }
 
     const newList = props.filteredList;
-    const droppedUser = props.filteredList[source.index];
+    const droppedItem = props.filteredList[source.index];
 
     newList.splice(source.index, 1);
-    newList.splice(destination.index, 0, droppedUser);
+    newList.splice(destination.index, 0, droppedItem);
   };
 
   return (

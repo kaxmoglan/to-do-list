@@ -118,9 +118,9 @@
   border-radius: 1rem;
   margin-bottom: 1rem;
   padding-left: 1rem;
-  -webkit-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  -webkit-transition: opacity 500ms ease, height 500ms ease;
+  -o-transition: opacity 500ms ease, height 500ms ease;
+  transition: opacity 500ms ease, height 500ms ease;
 }
 .toDoList__item.completed {
   opacity: 0.5;
