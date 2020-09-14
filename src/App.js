@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 // Components
@@ -19,6 +19,31 @@ function App() {
     completed: "",
   });
   const [theme, setTheme] = useState("theme_darkblue");
+
+  // RUN ONCE when the app starts
+  useEffect(() => {
+    getLocalTodos();
+  }, []);
+
+  // Use Effect
+  useEffect(() => {
+    // filterHandler();
+    saveLocalTodos();
+  }, [filteredList, toDoList]);
+
+  // Save to local
+  const saveLocalTodos = () => {
+    localStorage.setItem("to-do-list", JSON.stringify(toDoList));
+  };
+
+  const getLocalTodos = () => {
+    if (localStorage.getItem("to-do-list") === null) {
+      localStorage.setItem("to-do-list", JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(localStorage.getItem("to-do-list"));
+      setToDoList(todoLocal);
+    }
+  };
 
   return (
     <div className={`App ${theme}`}>
