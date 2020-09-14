@@ -105,6 +105,7 @@ const ToDo = (props) => {
 
   const editTemplate = (
     <>
+      <i className={`fas fa-sort ${props.theme}`}></i>
       <form onSubmit={handleEditSubmit}>
         <input
           value={newName}

@@ -17,6 +17,7 @@
     transition: all 500ms ease;
     opacity: 0.5;
     color: colours.$white;
+    outline: none;
 
     &:hover {
       opacity: 1;
@@ -25,6 +26,7 @@
     &.__active {
       font-weight: bolder;
       opacity: 1;
+      transition: all 500ms ease;
     }
 
     &.theme_grey {

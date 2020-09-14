@@ -80,6 +80,7 @@
   transition: all 500ms ease;
   opacity: 0.5;
   color: #fffcf6;
+  outline: none;
 }
 .filter-btn:hover {
   opacity: 1;
@@ -87,6 +88,9 @@
 .filter-btn.__active {
   font-weight: bolder;
   opacity: 1;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 .filter-btn.theme_grey {
   color: #f0a234;
@@ -210,6 +214,7 @@
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+  outline: none;
   color: black;
 }
 .toDoList__item .viewBtn.theme_darkmode {
@@ -242,8 +247,9 @@
   font-size: 2rem;
 }
 .toDoList__item form {
-  margin-left: 0;
-  width: 100%;
+  margin-left: 2rem;
+  width: 93.3%;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +259,7 @@
 }
 .toDoList__item form input {
   margin: 1.5rem 0 0 0;
-  width: 40rem;
+  width: 36rem;
   outline: none;
   background: none;
   border: none;
@@ -270,6 +276,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .toDoList__item form .editBtn {
   height: 100%;
@@ -283,6 +292,7 @@
   transition: all 500ms ease;
   opacity: 0.5;
   color: black;
+  outline: none;
 }
 .toDoList__item form .editBtn.theme_darkmode {
   color: #fffcf6;

@@ -107,6 +107,7 @@
       cursor: pointer;
       text-align: center;
       transition: all 500ms ease;
+      outline: none;
       color: colours.$black;
 
       &.theme_darkmode {
@@ -148,14 +149,15 @@
 
     // EDIT VIEW
     form {
-      margin-left: 0;
-      width: 100%;
+      margin-left: 2rem;
+      width: 93.3%;
+      height: 5rem;
       display: flex;
       justify-content: flex-start;
 
       input {
         margin: 1.5rem 0 0 0;
-        width: 40rem;
+        width: 36rem;
         outline: none;
         background: none;
         border: none;
@@ -169,6 +171,7 @@
         width: 10rem;
         display: flex;
         justify-content: flex-start;
+        align-items: center;
       }
 
       .editBtn {
@@ -181,6 +184,7 @@
         transition: all 500ms ease;
         opacity: 0.5;
         color: colours.$black;
+        outline: none;
 
         &.theme_darkmode {
           color: colours.$white;
