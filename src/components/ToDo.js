@@ -106,10 +106,11 @@ const ToDo = (props) => {
   const editTemplate = (
     <>
       <i className={`fas fa-sort ${props.theme}`}></i>
-      <form onSubmit={handleEditSubmit}>
+      <form className={`${props.theme}`} onSubmit={handleEditSubmit}>
         <input
           value={newName}
           id="todo-edit"
+          className={`${props.theme}`}
           type="text"
           onChange={handleEditInput}
           autoFocus

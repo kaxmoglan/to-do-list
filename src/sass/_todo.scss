@@ -164,6 +164,13 @@
         font-size: 2rem;
         height: 2rem;
         border-bottom: 1px solid black;
+        color: colours.$black;
+        transition: all 500ms ease;
+
+        &.theme_darkmode {
+          color: colours.$white;
+          border-bottom: 1px solid white;
+        }
       }
 
       .btn-group {

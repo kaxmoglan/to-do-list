@@ -266,6 +266,14 @@
   font-size: 2rem;
   height: 2rem;
   border-bottom: 1px solid black;
+  color: black;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.toDoList__item form input.theme_darkmode {
+  color: #fffcf6;
+  border-bottom: 1px solid white;
 }
 .toDoList__item form .btn-group {
   margin-left: 0.5rem;
