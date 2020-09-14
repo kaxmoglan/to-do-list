@@ -138,48 +138,17 @@
 .toDoList__item.theme_grey, .toDoList__item.theme_midblue, .toDoList__item.theme_purple {
   background: #fffcf6;
 }
-.toDoList__item .hamburger {
-  width: 2rem;
-  height: 0.2rem;
-  background: black;
-  position: relative;
-  top: 0.2rem;
+.toDoList__item .fa-sort {
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
-}
-.toDoList__item .hamburger::before {
-  display: inline-block;
-  content: "";
-  width: 2rem;
-  height: 0.2rem;
-  background: black;
+  opacity: 0.5;
+  color: black;
   position: relative;
-  top: -2.2rem;
-  -webkit-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  top: 0.1rem;
 }
-.toDoList__item .hamburger::after {
-  display: inline-block;
-  content: "";
-  width: 2rem;
-  height: 0.2rem;
-  background: black;
-  position: relative;
-  top: -3.8rem;
-  -webkit-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
-.toDoList__item .hamburger.theme_darkmode {
-  background: #fffcf6;
-}
-.toDoList__item .hamburger.theme_darkmode::before {
-  background: #fffcf6;
-}
-.toDoList__item .hamburger.theme_darkmode::after {
-  background: #fffcf6;
+.toDoList__item .fa-sort.theme_darkmode {
+  color: #fffcf6;
 }
 .toDoList__item-title {
   margin-right: auto;

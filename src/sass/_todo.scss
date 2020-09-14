@@ -41,45 +41,15 @@
       background: colours.$white;
     }
 
-    .hamburger {
-      width: 2rem;
-      height: 0.2rem;
-      background: colours.$black;
-      position: relative;
-      top: 0.2rem;
+    .fa-sort {
       transition: all 500ms ease;
-
-      &::before {
-        display: inline-block;
-        content: "";
-        width: 2rem;
-        height: 0.2rem;
-        background: colours.$black;
-        position: relative;
-        top: -2.2rem;
-        transition: all 500ms ease;
-      }
-      &::after {
-        display: inline-block;
-        content: "";
-        width: 2rem;
-        height: 0.2rem;
-        background: colours.$black;
-        position: relative;
-        top: -3.8rem;
-        transition: all 500ms ease;
-      }
+      opacity: 0.5;
+      color: colours.$black;
+      position: relative;
+      top: 0.1rem;
 
       &.theme_darkmode {
-        background: colours.$white;
-
-        &::before {
-          background: colours.$white;
-        }
-
-        &::after {
-          background: colours.$white;
-        }
+        color: colours.$white;
       }
     }
 

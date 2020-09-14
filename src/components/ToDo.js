@@ -66,7 +66,7 @@ const ToDo = (props) => {
   // View Templates
   const viewTemplate = (
     <>
-      <div className={`hamburger ${props.theme}`}></div>
+      <i className={`fas fa-sort ${props.theme}`}></i>
       <p
         className={
           props.item.completed
