@@ -44,6 +44,7 @@ function App() {
         toDoList={toDoList}
         setToDoList={setToDoList}
         filteredList={filteredList}
+        setFilteredList={setFilteredList}
         theme={theme}
       />
 

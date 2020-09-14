@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
 
 const ToDo = (props) => {
   // State
@@ -128,7 +129,22 @@ const ToDo = (props) => {
   );
 
   return (
-    <li className={liClass()}>{isEditing ? editTemplate : viewTemplate}</li>
+    <Draggable
+      key={props.index}
+      draggableId={props.index + ""}
+      index={props.index}
+    >
+      {(provided) => (
+        <li
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          className={liClass()}
+        >
+          {isEditing ? editTemplate : viewTemplate}
+        </li>
+      )}
+    </Draggable>
   );
 };
 
