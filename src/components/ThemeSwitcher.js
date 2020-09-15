@@ -1,10 +1,19 @@
 import React from "react";
 
 const ThemeSwitcher = (props) => {
+  const handleMenu = () => {
+    switch (props.menu) {
+      case "menu_closed":
+        props.setMenu("menu_open");
+        break;
+      default:
+        props.setMenu("menu_closed");
+        break;
+    }
+  };
   return (
     <div className={`themeSwitchSection ${props.theme}`}>
-      <h2 className={`themeSwitchTitle ${props.theme}`}>Select A Theme:</h2>
-      <div className="themeSwitcher">
+      <div className={`themeSwitcher ${props.menu}`}>
         <div
           onClick={() => props.setTheme("theme_darkmode")}
           className="themeSwitcher__darkmode"
@@ -33,6 +42,9 @@ const ThemeSwitcher = (props) => {
           onClick={() => props.setTheme("theme_orange")}
           className="themeSwitcher__orange"
         ></div>
+      </div>
+      <div onClick={handleMenu} className={`menu_btn ${props.menu}`}>
+        <i className={`fas fa-palette ${props.theme}`}></i>
       </div>
     </div>
   );

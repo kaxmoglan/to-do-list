@@ -3,62 +3,81 @@
 
 .themeSwitchSection {
   position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4rem;
-  bottom: 0rem;
-  left: 0;
-  right: 0;
-  max-width: 100vw;
+  left: 2rem;
+  bottom: 2rem;
   transition: all 500ms ease;
+  background: none;
 
-  &.theme_darkmode {
-    background: colours.$vsDark;
-  }
-  &.theme_darkblue {
-    background: colours.$darkblue;
-  }
-  &.theme_red {
-    background: colours.$red;
-  }
-  &.theme_grey {
-    background: colours.$grey;
-  }
-  &.theme_midblue {
-    background: colours.$midblue;
-  }
-  &.theme_orange {
-    background: colours.$orange;
-  }
-  &.theme_purple {
-    background: colours.$purple;
+  @include responsive.small-screen {
+    left: 0;
+    bottom: 0.5rem;
   }
 
-  .themeSwitchTitle {
-    font-size: 2rem;
-    transition: all 500ms ease;
-    color: colours.$white;
+  .menu_btn {
+    // margin-top: 2rem;
+    cursor: pointer;
+    z-index: 100;
 
-    &.theme_orange {
-      color: colours.$black;
+    .fa-palette {
+      font-size: 5rem;
+      color: colours.$white;
+      transition: all 500ms ease;
+
+      &:hover {
+        transform: rotate(45deg);
+      }
+
+      &.theme_orange {
+        color: colours.$black;
+      }
+
+      @include responsive.small-screen {
+        font-size: 4rem;
+      }
     }
   }
 
   .themeSwitcher {
     display: flex;
+    padding-bottom: 2rem;
+    width: 6rem;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
+    overflow-y: hidden;
+    overflow-x: visible;
+
+    @include responsive.small-screen {
+      padding-bottom: 1rem;
+    }
+
+    &.menu_open {
+      div {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &.menu_closed {
+      pointer-events: none;
+      div {
+        opacity: 0;
+        transform: translateY(20rem);
+      }
+    }
     div {
       width: 4rem;
       height: 4rem;
-      margin: 1rem;
+      margin-top: 2rem;
       border-radius: 50%;
       border: 2px solid white;
       box-shadow: 0.25rem 0.25rem;
-      transition: all 250ms ease;
+      transition: all 300ms ease;
       cursor: pointer;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
 
       @include responsive.small-screen {

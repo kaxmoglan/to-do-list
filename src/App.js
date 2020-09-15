@@ -19,6 +19,7 @@ function App() {
     completed: "",
   });
   const [theme, setTheme] = useState("theme_darkblue");
+  const [menu, setMenu] = useState("menu_closed");
 
   // RUN ONCE when the app starts
   useEffect(() => {
@@ -73,7 +74,12 @@ function App() {
         theme={theme}
       />
 
-      <ThemeSwitcher theme={theme} setTheme={setTheme} />
+      <ThemeSwitcher
+        theme={theme}
+        setTheme={setTheme}
+        menu={menu}
+        setMenu={setMenu}
+      />
     </div>
   );
 }
